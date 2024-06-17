@@ -1,0 +1,91 @@
+[
+    {
+        "label": "joblib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "joblib",
+        "description": "joblib",
+        "detail": "joblib",
+        "documentation": {}
+    },
+    {
+        "label": "controller",
+        "importPath": "controller",
+        "description": "controller",
+        "isExtraImport": true,
+        "detail": "controller",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "kind": 2,
+        "importPath": "controller.controller",
+        "description": "controller.controller",
+        "peekOfCode": "def models():\n    return ['models/model_hipotese.pkl','models/model_tratamento.pkl']",
+        "detail": "controller.controller",
+        "documentation": {}
+    },
+    {
+        "label": "model_tratamento_calibrated",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "model_tratamento_calibrated = joblib.load(controller.models()[1])\nmodel_hipotese_calibrated = joblib.load(controller.models()[0])\nnovo_sintoma = [\"febre\"]\nprevisao_tratamento = model_tratamento_calibrated.predict(novo_sintoma)\nprob_tratamento = model_tratamento_calibrated.predict_proba(novo_sintoma).max()\nprevisao_hipotese = model_hipotese_calibrated.predict(novo_sintoma)\nprob_hipotese = model_hipotese_calibrated.predict_proba(novo_sintoma).max()\nprint(f'Sintoma: {novo_sintoma}')\nprint(f'Previsão de Tratamento: {previsao_tratamento[0]} com {prob_tratamento * 100:.2f}% de confiança')\nprint(f'Previsão de Hipótese: {previsao_hipotese[0]} com {prob_hipotese * 100:.2f}% de confiança')",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "model_hipotese_calibrated",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "model_hipotese_calibrated = joblib.load(controller.models()[0])\nnovo_sintoma = [\"febre\"]\nprevisao_tratamento = model_tratamento_calibrated.predict(novo_sintoma)\nprob_tratamento = model_tratamento_calibrated.predict_proba(novo_sintoma).max()\nprevisao_hipotese = model_hipotese_calibrated.predict(novo_sintoma)\nprob_hipotese = model_hipotese_calibrated.predict_proba(novo_sintoma).max()\nprint(f'Sintoma: {novo_sintoma}')\nprint(f'Previsão de Tratamento: {previsao_tratamento[0]} com {prob_tratamento * 100:.2f}% de confiança')\nprint(f'Previsão de Hipótese: {previsao_hipotese[0]} com {prob_hipotese * 100:.2f}% de confiança')",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "novo_sintoma",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "novo_sintoma = [\"febre\"]\nprevisao_tratamento = model_tratamento_calibrated.predict(novo_sintoma)\nprob_tratamento = model_tratamento_calibrated.predict_proba(novo_sintoma).max()\nprevisao_hipotese = model_hipotese_calibrated.predict(novo_sintoma)\nprob_hipotese = model_hipotese_calibrated.predict_proba(novo_sintoma).max()\nprint(f'Sintoma: {novo_sintoma}')\nprint(f'Previsão de Tratamento: {previsao_tratamento[0]} com {prob_tratamento * 100:.2f}% de confiança')\nprint(f'Previsão de Hipótese: {previsao_hipotese[0]} com {prob_hipotese * 100:.2f}% de confiança')",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "previsao_tratamento",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "previsao_tratamento = model_tratamento_calibrated.predict(novo_sintoma)\nprob_tratamento = model_tratamento_calibrated.predict_proba(novo_sintoma).max()\nprevisao_hipotese = model_hipotese_calibrated.predict(novo_sintoma)\nprob_hipotese = model_hipotese_calibrated.predict_proba(novo_sintoma).max()\nprint(f'Sintoma: {novo_sintoma}')\nprint(f'Previsão de Tratamento: {previsao_tratamento[0]} com {prob_tratamento * 100:.2f}% de confiança')\nprint(f'Previsão de Hipótese: {previsao_hipotese[0]} com {prob_hipotese * 100:.2f}% de confiança')",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "prob_tratamento",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "prob_tratamento = model_tratamento_calibrated.predict_proba(novo_sintoma).max()\nprevisao_hipotese = model_hipotese_calibrated.predict(novo_sintoma)\nprob_hipotese = model_hipotese_calibrated.predict_proba(novo_sintoma).max()\nprint(f'Sintoma: {novo_sintoma}')\nprint(f'Previsão de Tratamento: {previsao_tratamento[0]} com {prob_tratamento * 100:.2f}% de confiança')\nprint(f'Previsão de Hipótese: {previsao_hipotese[0]} com {prob_hipotese * 100:.2f}% de confiança')",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "previsao_hipotese",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "previsao_hipotese = model_hipotese_calibrated.predict(novo_sintoma)\nprob_hipotese = model_hipotese_calibrated.predict_proba(novo_sintoma).max()\nprint(f'Sintoma: {novo_sintoma}')\nprint(f'Previsão de Tratamento: {previsao_tratamento[0]} com {prob_tratamento * 100:.2f}% de confiança')\nprint(f'Previsão de Hipótese: {previsao_hipotese[0]} com {prob_hipotese * 100:.2f}% de confiança')",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "prob_hipotese",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "prob_hipotese = model_hipotese_calibrated.predict_proba(novo_sintoma).max()\nprint(f'Sintoma: {novo_sintoma}')\nprint(f'Previsão de Tratamento: {previsao_tratamento[0]} com {prob_tratamento * 100:.2f}% de confiança')\nprint(f'Previsão de Hipótese: {previsao_hipotese[0]} com {prob_hipotese * 100:.2f}% de confiança')",
+        "detail": "main",
+        "documentation": {}
+    }
+]
